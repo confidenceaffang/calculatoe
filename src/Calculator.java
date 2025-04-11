@@ -3,16 +3,27 @@ The Calculator class implementation which is derived from the implementation of 
  */
 public class Calculator implements BasicMath {
     /*
-    Creates a double named previousValuye
+    Creates a double and initializes named previousValuye
      */
     private double previousValue = 0.0;
-
+    /*
+   Creates a double and initializes named inputValue
+    */
     private double inputValue = 0.0;
+      /*
+   Creates a double and initializes named currentValue
+    */
 
     private double currentValue = 0.0;
+    ]  /*
+   Creates the character and initializes named operator
+    */
 
     private char operator = '+';
 
+    /*
+    creates an overided method for the add method from the BasicMath interface with the generic value N pass to it
+     */
     @Override
     public <N extends Number> void add(N value){
         operator = '+';

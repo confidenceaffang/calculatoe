@@ -1,6 +1,5 @@
 public class AdvanceCalc extends MemoryCalc  implements AdvanceMath{
 
-
     private int precision = 1;
 
     public void setPrecision(int precision) {
