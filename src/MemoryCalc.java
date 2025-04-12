@@ -17,14 +17,14 @@ public class MemoryCalc extends Calculator {
     /*
     a method that clears the current memory value by reassigning it to 0
      */
-    public void memoryClear(){
+    public void memoryClear() {
         this.memoryValue = 0.0;
     }
 
     /*
     a method that subtract 1 from the current memory value
      */
-    public void memorySubtract(){
+    public void memorySubtract() {
         this.memoryValue -= 1.0;
     }
 
@@ -38,14 +38,14 @@ public class MemoryCalc extends Calculator {
     /*
  a method that adds 1 from the current memory value
   */
-    public void memoryAdd(){
+    public void memoryAdd() {
         this.memoryValue += 1.0;
     }
 
     /*
  a method that clears the current memory value by reassigning it to zero similar to the memoryClear method
   */
-    public void clear(){
+    public void clear() {
         this.memoryValue = 0.0;
     }
 }

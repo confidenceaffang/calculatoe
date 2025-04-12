@@ -1,7 +1,7 @@
 /*
 Created a class called AdvanceCal to handle advance calculation which is an implementation of the AdvancedMath interface and a subclass of MemoryCalc
  */
-public class AdvanceCalc extends MemoryCalc implements AdvanceMath{
+public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     /*
     creates an initializes a field integer named precision to 1
      */
@@ -13,11 +13,12 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath{
     public void setPrecision(int precision) {
         this.precision = precision;
     }
+
     /*
      creates an overided method for the square root method from the AdvanceMath interface
       */
     @Override
-    public void sqrt(){
+    public void sqrt() {
         operator = '\u221A';
         previousValue = currentValue;
         inputValue = 0.0;
@@ -29,7 +30,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath{
  creates an overided method for the power method from the AdvanceMath interface with the generic value N pass to it
   */
     @Override
-    public <N extends Number> void pow(N value){
+    public <N extends Number> void pow(N value) {
         operator = '\u005E';
         previousValue = currentValue;
         inputValue = value.doubleValue();
@@ -37,15 +38,15 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath{
         updateDisplay();
     }
 
-      /*
-   creates an overided method for the uodateDisplay method from the MemoryCal which is also a subclass of Calaulator that has this method
-    */
+    /*
+ creates an overided method for the uodateDisplay method from the MemoryCal which is also a subclass of Calaulator that has this method
+  */
     @Override
-    public void updateDisplay(){
+    public void updateDisplay() {
         String format1 = " %,12." + precision + "f%n"; // used to jsut dipslay one value
         String format2 = "%1s%,12." + precision + "f%n"; // used to display the operator plus the inputValue
 
-        if(operator == '\u221A'){ // square root with no input value
+        if (operator == '\u221A') { // square root with no input value
             System.out.printf(format2, operator, previousValue);
         } else {
             System.out.printf(format1, previousValue);

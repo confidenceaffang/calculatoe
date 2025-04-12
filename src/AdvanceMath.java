@@ -1,3 +1,6 @@
+/*
+AdvanceMath interface implementation
+ */
 public interface AdvanceMath {
     /*
     The power implementation taking in the Generic value (N) of the type Number
