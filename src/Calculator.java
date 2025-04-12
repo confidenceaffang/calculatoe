@@ -5,25 +5,33 @@ public class Calculator implements BasicMath {
     /*
     Creates a double and initializes named previousValuye
      */
-    protected double previousValue = 0.0;
+    protected double previousValue;
     /*
    Creates a double and initializes named inputValue
     */
-    protected double inputValue = 0.0;
+    protected double inputValue;
       /*
    Creates a double and initializes named currentValue
     */
 
-    protected double currentValue = 0.0;
+    protected double currentValue;
     /*
    Creates the character and initializes named operator
     */
 
-    protected char operator = '+';
+    protected char operator = '?';
 
     /*
     creates an overided method for the add method from the BasicMath interface with the generic value N pass to it
      */
+
+    /*
+a method that clears the current value by reassigning it to zero similar to the memoryClear method in the MemoryCalc class
+*/
+    public void clear() {
+        currentValue = 0.0;
+    }
+
     @Override
     public <N extends Number> void add(N value) {
         operator = '+';

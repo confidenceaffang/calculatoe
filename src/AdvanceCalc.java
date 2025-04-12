@@ -5,7 +5,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     /*
     creates an initializes a field integer named precision to 1
      */
-    protected int precision = 1;
+    protected int precision = 2;
 
     /*
     creates a method called setPrecision which is basically a constructor that sets the value of precision
@@ -56,6 +56,9 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         System.out.println("==============");
         System.out.printf(format1, currentValue);
         System.out.println();
+
     }
+
+
 }
 

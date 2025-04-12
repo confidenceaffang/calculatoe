@@ -18,34 +18,32 @@ public class MemoryCalc extends Calculator {
     a method that clears the current memory value by reassigning it to 0
      */
     public void memoryClear() {
-        this.memoryValue = 0.0;
+        memoryValue = 0.0;
+        System.out.println("Memory Clear " + memoryValue);
     }
 
     /*
-    a method that subtract 1 from the current memory value
+    a method that subtracts the currentValue from the memoryValue
      */
     public void memorySubtract() {
-        this.memoryValue -= 1.0;
+        memoryValue -= currentValue;
+        System.out.println("Memory Subtract: " + memoryValue);
     }
 
     /*
     a method that returns the current memory value
      */
     public double getMemoryValue() {
-        return this.memoryValue;
+        return memoryValue;
     }
 
     /*
- a method that adds 1 from the current memory value
+ a method that adds the currentValue to the memoryValue
   */
     public void memoryAdd() {
-        this.memoryValue += 1.0;
+        System.out.println("Memory Add: " + currentValue);
+        memoryValue += currentValue;
     }
 
-    /*
- a method that clears the current memory value by reassigning it to zero similar to the memoryClear method
-  */
-    public void clear() {
-        this.memoryValue = 0.0;
-    }
+
 }
