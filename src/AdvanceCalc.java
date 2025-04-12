@@ -1,6 +1,6 @@
-public class AdvanceCalc extends MemoryCalc  implements AdvanceMath{
+public class AdvanceCalc extends MemoryCalc implements AdvanceMath{
 
-    private int precision = 1;
+    protected int precision = 1;
 
     public void setPrecision(int precision) {
         this.precision = precision;
@@ -16,7 +16,7 @@ public class AdvanceCalc extends MemoryCalc  implements AdvanceMath{
     }
     public <N extends Number> void pow(N value){
         operator = '\u005E';
-        previousValue = CurrentValue;
+        previousValue = currentValue;
         inputValue =0.0;
         currentValue = Math.pow(inputValue, currentValue);
         updateDisplay();
@@ -32,7 +32,7 @@ public class AdvanceCalc extends MemoryCalc  implements AdvanceMath{
             System.out.printf(format2, operator, previousValue);
         } else {
             System.out.printf(format1, previousValue);
-            System.out.println(format2, operator, inputValue);
+            System.out.printf(format2, operator, inputValue);
         }
 
         System.out.println("==============");
