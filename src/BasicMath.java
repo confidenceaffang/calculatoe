@@ -14,23 +14,36 @@
 Basic Math implementation
  */
 public interface BasicMath {
-    /*
-    The add implementation taking in the Generic value (N) of the type Number
+
+    /**
+     * The add implementation taking in the Generic value (N) of the type Number
+     *
+     * @param value the value to be added, of type Number.
+     * @param <N> the type of the number.
      */
     <N extends Number> void add(N value);
 
-    /*
-    The subtract implementation taking in the Generic value (N) of the type Number
+    /**
+     * The subtract implementation taking in the Generic value (N) of the type Number
+     *
+     * @param value the value to be subtracted, of type Number.
+     * @param <N> the type of the number.
      */
     <N extends Number> void subtract(N value);
 
-    /*
-    The multiply implementation taking in the Generic value (N) of the type Number
+    /**
+     * The multiply implementation taking in the Generic value (N) of the type Number
+     *
+     * @param value the value to be multiplied, of type Number.
+     * @param <N> the type of the number.
      */
     <N extends Number> void multiply(N value);
 
-    /*
-    The divide implementation taking in the Generic value (N) of the type Number
+    /**
+     * The divide implementation taking in the Generic value (N) of the type Number
+     *
+     * @param value the value to be divided, of type Number.
+     * @param <N> the type of the number.
      */
     <N extends Number> void divide(N value);
 }
