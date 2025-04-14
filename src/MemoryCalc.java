@@ -1,6 +1,15 @@
-/*
-Memory class which is a subclass or derived class from Calculator
+/**
+ * Memory class which is a subclass or derived class from Calculator
+ *
+ * @author Confidence Affang , Ricardo Pretorius
+ * @version 1.0
+ * @since 2025.04.11
+ * @see <a href="https://github.com/confidenceaffang/CalculatorApp">GitHub Repository</a>
+ * @see <a href="https://github.com/confidenceaffang">Confidence Affang's GitHub</a>
+ * @see <a href="https://github.com/RicardoPret">Ricardo Pretorius GitHub</a>
+ *
  */
+
 public class MemoryCalc extends Calculator {
     /*
     created and initialized a double name memoryValue to 0

@@ -1,7 +1,13 @@
-/*
-This is the working class used toe test the calcultor app
-@author Confidence Affang, Ricardo Pretorius
-@see <a href="https://github.com/confidenceaffang/calculatoe.git">Github Repository</a>
+/**
+ * This provides the code for input that the program would expect.
+ *
+ * @author Confidence Affang , Ricardo Pretorius
+ * @version 1.0
+ * @since 2025.04.11
+ * @see <a href="https://github.com/confidenceaffang/CalculatorApp">GitHub Repository</a>
+ * @see <a href="https://github.com/confidenceaffang">Confidence Affang's GitHub</a>
+ * @see <a href="https://github.com/RicardoPret">Ricardo Pretorius GitHub</a>
+ *
  */
 public class Testbench {
 

@@ -1,22 +1,36 @@
-/*
-Created a class called AdvanceCal to handle advance calculation which is an implementation of the AdvancedMath interface and a subclass of MemoryCalc
+
+/**
+ *  The code in AdvanceCalc provides code for using a simple calculator.
+ *  It extends the MemoryCalc class and implements the AdvanceMath interface.
+ *
+ * @author Confidence Affang , Ricardo Pretorius
+ * @version 1.0
+ * @since 2025.04.11
+ * @see <a href="https://github.com/confidenceaffang/CalculatorApp">GitHub Repository</a>
+ * @see <a href="https://github.com/confidenceaffang">Confidence Affang's GitHub</a>
+ * @see <a href="https://github.com/RicardoPret">Ricardo Pretorius GitHub</a>
+ *
  */
+
 public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
-    /*
-    creates an initializes a field integer named precision to 1
+    /**
+     * creates an initializes a field integer named precision to 2
      */
     protected int precision = 2;
 
-    /*
-    creates a method called setPrecision which is basically a constructor that sets the value of precision
+    /**
+     * Creates a method called setPrecision which is basically a constructor that sets the value of precision
+     *
+     * @param precision the number of decimal places to display
      */
     public void setPrecision(int precision) {
         this.precision = precision;
     }
 
-    /*
-     creates an overided method for the square root method from the AdvanceMath interface
-      */
+    /**
+     * Creates an overided method for the square root of the current value
+     * Overrides the sqrt method from the AdvanceMath interface
+     */
     @Override
     public void sqrt() {
         operator = '\u221A';
@@ -26,9 +40,12 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         updateDisplay();
     }
 
-    /*
- creates an overided method for the power method from the AdvanceMath interface with the generic value N pass to it
-  */
+    /**
+     * creates an overided method for the power method from the AdvanceMath interface with the generic value N pass to it
+     *
+     * @param value the exponent to raise the current value to
+     * @param <N> the type of the exponent, which extends Number
+     */
     @Override
     public <N extends Number> void pow(N value) {
         operator = '\u005E';
@@ -38,9 +55,9 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         updateDisplay();
     }
 
-    /*
- creates an overided method for the uodateDisplay method from the MemoryCal which is also a subclass of Calaulator that has this method
-  */
+    /**
+     * creates an overided method for the uodateDisplay method from the MemoryCal which is also a subclass of Calaulator that has this method
+     */
     @Override
     public void updateDisplay() {
         String format1 = " %,12." + precision + "f%n"; // used to jsut dipslay one value
