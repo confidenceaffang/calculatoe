@@ -20,7 +20,7 @@ public class MemoryCalc extends Calculator {
      * A method that displays the current memory value
      */
     public void displayMemoryValue() {
-        System.out.println("Memory Value: " + memoryValue);
+        System.out.printf("%,12.2f", memoryValue);
     }
 
     /**
@@ -28,7 +28,8 @@ public class MemoryCalc extends Calculator {
      */
     public void memoryClear() {
         memoryValue = 0.0;
-        System.out.println("Memory Clear " + memoryValue);
+        System.out.print("Memory Clear       ");
+        displayMemoryValue();
     }
 
     /**
@@ -36,7 +37,8 @@ public class MemoryCalc extends Calculator {
      */
     public void memorySubtract() {
         memoryValue -= currentValue;
-        System.out.println("Memory Subtract: " + memoryValue);
+        System.out.print("Memory Subtract    ");
+        displayMemoryValue();
     }
 
     /**
@@ -53,7 +55,8 @@ public class MemoryCalc extends Calculator {
      * a method that adds the currentValue to the memoryValue
      */
     public void memoryAdd() {
-        System.out.println("Memory Add: " + currentValue);
         memoryValue += currentValue;
+        System.out.print("Memory add         ");
+        displayMemoryValue();
     }
 }

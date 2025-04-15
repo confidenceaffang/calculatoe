@@ -76,9 +76,11 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
 
     }
 
-    //@Override
-    //public void displayMemoryValue() {
-    //}
+    @Override
+    public void displayMemoryValue() {
+        String format = " %,12." + precision + "f%n"; // used to jsut dipslay one value
+        System.out.printf(format, memoryValue);
+    }
 
 }
 
