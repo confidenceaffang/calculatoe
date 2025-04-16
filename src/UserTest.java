@@ -16,16 +16,25 @@ public class UserTest {
         AdvanceCalc advCalc = new AdvanceCalc();
         boolean b = true;
 
+        System.out.println("\n====== Advanced Calculator ======");
+
+        int precision = Input.getIntRange("Please choose precision: ", 0, 5);
+        advCalc.setPrecision(precision);
+
         while (b){
-            System.out.println("\n====== Advanced Calculator ======");
-            System.out.println("1. add value");
-            System.out.println("2. subtract value");
-            System.out.println("3. add to memory");
-            System.out.println("4. display memory");
-            System.out.println("5. clear memory");
+            System.out.println("1. Add value");
+            System.out.println("2. Subtract value");
+            System.out.println("3. Multiply value");
+            System.out.println("4. Divide value");
+            System.out.println("5. Perform square root");
+            System.out.println("6. Perform power");
+            System.out.println("7. Add to memory");
+            System.out.println("8. Subtract from memory");
+            System.out.println("9. Display memory");
+            System.out.println("10. Clear memory");
             System.out.println("0. Exit");
 
-            int choice = Input.getIntRange("Select an option (0-5)", 0,5);
+            int choice = Input.getIntRange("Select an option (0-10)", 0,10);
             switch (choice) {
                 case 1:
                     double valueToAdd = Input.getDouble("Enter Value: ");
@@ -38,20 +47,47 @@ public class UserTest {
                     break;
 
                 case 3:
-                    advCalc.memoryAdd();
-                    System.out.println("Current value added to memory");
+                    double valueToMultiply = Input.getDouble("Enter Value: ");
+                    advCalc.multiply(valueToMultiply);
                     break;
 
                 case 4:
-                    System.out.println("Memory Value");
-                    advCalc.displayMemoryValue();
+                    double valueToDivide = Input.getDouble("Enter Value: ");
+                    advCalc.divide(valueToDivide);
                     break;
 
                 case 5:
+                    advCalc.sqrt();
+                    break;
+
+                case 6:
+                    double powerValue = Input.getDouble("Enter Power: ");
+                    advCalc.pow(powerValue);
+                    break;
+
+                case 7:
+                    advCalc.memoryAdd();
+                    System.out.println("Current value added to the memory");
+                    break;
+
+                case 8:
+                    advCalc.memorySubtract();
+                    System.out.println("Current value subtracted from the memory");
+                    break;
+
+                case 9:
+                    System.out.println("Memory: ");
+                    advCalc.displayMemoryValue();
+                    break;
+
+                case 10:
                     advCalc.memoryClear();
                     break;
 
-
+                case 0:
+                    System.out.println("Exit");
+                    b = false;
+                    break;
 
             }
         }
